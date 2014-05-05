@@ -58,6 +58,9 @@ angular.module('ngshowvariant',[]);
           variant = newVariant;
           var hide = !inList(newVariant, expectingVariant);
           el.toggleClass('hide', hide);
+          if( hide ){
+           el.hide();
+          }
         }
         fn(variant);
 
